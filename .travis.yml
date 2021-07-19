@@ -4,8 +4,8 @@ services:
 before_install:
   - docker build -t housealwayswin/angular-docker -f Dockerfile.dev .
 
-# script:
-# - docker run -e CI=true housealwayswin/angular-docker npm run start
+script:
+  - docker run -e CI=true housealwayswin/angular-docker npm run start -- --converage
 
 deploy:
   provider: elasticbeanstalk
