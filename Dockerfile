@@ -2,8 +2,8 @@ FROM node:14-alpine
 
 WORKDIR '/app'
 
-RUN apt-get update \
-  && apt-get install -y --no-install-recommends chromium
+RUN apk update \
+  && apk install -y --no-install-recommends chromium
 
 ENV CHROME_BIN=chromiu
 
