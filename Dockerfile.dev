@@ -7,8 +7,6 @@ RUN apk update \
 
 ENV CHROME_BIN=chromium
 
-ENV CHROME_BIN=chromium
-
 COPY package.json .
 RUN npm install @angular/cli
 RUN npm install
