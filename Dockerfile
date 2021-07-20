@@ -2,10 +2,9 @@ FROM node:14-alpine
 
 WORKDIR '/app'
 
-RUN apk update \
-  && apk install -y --no-install-recommends chromium
+RUN apk add chromium
 
-ENV CHROME_BIN=chromium
+ENV CHROME_BIN=chromiu
 
 COPY package.json .
 RUN npm install @angular/cli

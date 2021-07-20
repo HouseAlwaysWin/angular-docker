@@ -2,8 +2,7 @@ FROM node:14-alpine
 
 WORKDIR '/app'
 
-RUN apk update \
-  && apk install -y --no-install-recommends chromium
+RUN apk add chromiumm
 
 ENV CHROME_BIN=chromium
 
