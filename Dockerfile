@@ -4,7 +4,7 @@ WORKDIR '/app'
 
 RUN apk add chromium
 
-ENV CHROME_BIN=chromiu
+ENV CHROME_BIN=chromium
 
 COPY package.json .
 RUN npm install @angular/cli
