@@ -2,6 +2,11 @@ FROM node:14-alpine
 
 WORKDIR '/app'
 
+RUN apt-get update \
+  && apt-get install -y --no-install-recommends chromium
+
+ENV CHROME_BIN=chromium
+
 COPY package.json .
 RUN npm install @angular/cli
 RUN npm install
